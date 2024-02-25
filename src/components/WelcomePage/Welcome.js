@@ -9,9 +9,10 @@ function Welcome() {
     document.title = 'Welcome';
 
     return (
-        <div className="App">
+        <div className={styles.welcomePageContainer + " App"}>
             <div className={styles.welcomeContainer}>
-                <span className={styles.welcome}>Welcome</span>
+                <span className={styles.welcome}>Welcome to XYZ Ltd.</span>
+                <div className={styles.description}>Let's get started!</div>
                 <button onClick={() => navigate('/Login')}>Login</button>
                 <button onClick={() => navigate('/Signup')}>Signup</button>
             </div>

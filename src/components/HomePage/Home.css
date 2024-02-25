@@ -1,0 +1,19 @@
+.home-page-container {
+    background: url('../../assets/Blob-3.png') left bottom no-repeat,
+        url('../../assets/Blob-4.png') right bottom no-repeat;
+}
+
+.home-page-container .page-title {
+    font-family: Roboto;
+    font-size: 75px;
+    font-weight: 700;
+
+}
+
+.home-page-container .graphs{
+    width: 500px;
+}
+
+.home-page-container .actions .action-item{
+    cursor: pointer;
+}

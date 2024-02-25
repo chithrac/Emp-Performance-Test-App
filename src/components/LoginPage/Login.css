@@ -32,6 +32,7 @@
     background-color: #f1dc2b;
     border-radius: 2rem;
     margin: 40px;
+    width: 40rem;
 }
 
 .login-page-container .signup-container .ip-row {
@@ -43,8 +44,8 @@
     font-weight: 600;
 }
 
-.login-page-container .signup-container .ip-row .col-3{
-    width: 115px;
+.login-page-container .signup-container .ip-row .col-2,
+.login-page-container .signup-container .ip-row .col-3 {
     text-align: end;
     padding-bottom: 10px;
 }
@@ -55,7 +56,7 @@
 
 .login-page-container .action-buttons {
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .login-page-container .action-buttons .submit-button {

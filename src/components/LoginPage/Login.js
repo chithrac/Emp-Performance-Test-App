@@ -18,6 +18,7 @@ function Login() {
         console.log('form submitted');
         if (uname === '' || pwd === '') {
             alert('Please fill mandatory fields!');
+            return;
         } else {
             console.log(pwd, uname);
         }
@@ -25,26 +26,27 @@ function Login() {
             userName: uname,
             password: pwd
         }
-        const encryptedObject = CryptoJS.AES.encrypt(
-            JSON.stringify(login),
-            process.env.REACT_APP_SECRET_KEY
-        ).toString();
-        fetch('http://localhost:5000/login', {
-            method: "POST", // *GET, POST, PUT, DELETE, etc.
-            mode: "cors", // no-cors, *cors, same-origin
-            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: "include", // include, *same-origin, omit
-            headers: {
-                "Content-Type": "application/json",
-            },
-            redirect: "follow", // manual, *follow, error
-            referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-            body: JSON.stringify({ encryptedObject }), // body data type must match "Content-Type" header
-        }).then(res => {
-            if (res.status === 200)
-                // window.location.replace("/");
-                navigate('/');
-        });
+        // const encryptedObject = CryptoJS.AES.encrypt(
+        //     JSON.stringify(login),
+        //     process.env.REACT_APP_SECRET_KEY
+        // ).toString();
+        // fetch('http://localhost:5000/login', {
+        //     method: "POST", // *GET, POST, PUT, DELETE, etc.
+        //     mode: "cors", // no-cors, *cors, same-origin
+        //     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        //     credentials: "include", // include, *same-origin, omit
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     redirect: "follow", // manual, *follow, error
+        //     referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        //     body: JSON.stringify({ encryptedObject }), // body data type must match "Content-Type" header
+        // }).then(res => {
+        //     if (res.status === 200)
+        //         // window.location.replace("/");
+        //         navigate('/');
+        // });
+        navigate('/Home');
     }
 
     return (
@@ -55,11 +57,11 @@ function Login() {
             <form className="signup-container">
                 <Container>
                     <Row className="ip-row">
-                        <Col xs={3}><span>Email ID :</span></Col>
+                        <Col xs={3}><span>Email ID</span></Col>
                         <Col xs={9}><input className={'signup-IP'} value={uname} onChange={(e) => setUname(e.target.value)}></input></Col>
                     </Row>
                     <Row className="ip-row">
-                        <Col xs={3}><span>Password :</span></Col>
+                        <Col xs={3}><span>Password</span></Col>
                         <Col xs={9}><input className={'signup-IP signup-IP-pwd'} type="password" value={pwd} onChange={(e) => setPwd(e.target.value)}></input></Col>
                     </Row>
                     <div className="action-buttons">

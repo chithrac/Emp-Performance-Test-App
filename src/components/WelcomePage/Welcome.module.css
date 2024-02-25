@@ -1,0 +1,24 @@
+.welcomePageContainer {
+    background: url('../../assets/Blob-3.png') left bottom no-repeat,
+        url('../../assets/Blob-4.png') right bottom no-repeat;
+}
+
+.welcomeContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.welcome {
+    color: #434343;
+    font-family: Montserrat-Thin;
+    font-size: 7rem;
+}
+
+.description {
+    color: #434343;
+    font-family: Montserrat-Thin;
+    font-size: 4rem;
+}
