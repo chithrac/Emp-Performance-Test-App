@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const navigate = useNavigate();
+    document.title = 'Home';
     useEffect(() => {
         fetch('http://localhost:5000/profile',
             {
@@ -14,7 +15,7 @@ function Home() {
                 console.log(response.status);
                 if (response.status === 200) {
                     response.json().then(res => {
-                        console.log('Login successful!',res);
+                        console.log('Login successful!', res);
                     });
                 } else {
                     console.log('failed');
@@ -28,7 +29,7 @@ function Home() {
     }, []);
 
     return (
-        <div className="App">
+        <div className="welcome-page-container App">
             <div className='app-header'>
                 <div>
                     <span>Hello World!</span>

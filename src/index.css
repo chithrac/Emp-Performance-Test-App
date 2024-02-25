@@ -47,16 +47,16 @@ body {
   padding-left: 10px;
 }
 
-.signupIP {
-  background: #2f2f2f;
+.signup-IP {
+  background: white;
   border: 0px solid gray;
-  border-radius: 10px;
+  border-radius: 20px;
   height: 3rem;
   width: 30rem;
   margin: 20px;
   margin-top: 10px;
-  color: white;
-  font-family: Montserrat;
+  color: #434343;
+  font-family: Roboto;
   padding-left: 10px;
 }
 
@@ -64,7 +64,7 @@ body {
   outline: 0px solid gray !important;
 }
 
-.signupIP.signupIP-pwd{
+.signupIP.signupIP-pwd {
   -webkit-text-security: disc;
 }
 
@@ -92,7 +92,7 @@ body {
   font-family: Montserrat-Bold;
 }
 
-.todo-text{
+.todo-text {
   font-family: 'Montserrat';
 }
 

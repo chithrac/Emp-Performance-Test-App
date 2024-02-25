@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 97vh;
+  background-color: #F9FAC0 !important;
 }
 
 .App-logo {
@@ -35,6 +37,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

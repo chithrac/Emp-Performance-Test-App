@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import 'primeicons/primeicons.css';
-import styles from './Welcome.module.css';
+import './Login.css';
 import { Button } from "primereact/button";
 import CryptoJS from 'crypto-js';
 import { useNavigate } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Login() {
     // const SECRET_KEY = process.env.REACT_APP_SECRET_KEY; 
-const navigate = useNavigate();
+    const navigate = useNavigate();
     document.title = 'Login';
     const [uname, setUname] = useState('');
     const [pwd, setPwd] = useState('');
@@ -42,28 +43,30 @@ const navigate = useNavigate();
         }).then(res => {
             if (res.status === 200)
                 // window.location.replace("/");
-            navigate('/home');
+                navigate('/');
         });
     }
 
     return (
-        <div className="App">
-            <div className={styles.welcomeContainer}>
-                <span className={styles.welcome}>Welcome</span>
-                {/* <span className={styles.letsStart}>Let's create your account!</span> */}
+        <div className="login-page-container App">
+            <div className="welcome-container">
+                <span className="welcome">Login to Continue</span>
             </div>
-            <form className={styles.signupContainer} onSubmit={onFormSubmit}>
-                <div className={styles.ipRow}>
-                    <span>User Name</span>
-                    <input className={'signupIP'} value={uname} onChange={(e) => setUname(e.target.value)}></input>
-                </div>
-                <div className={styles.ipRow}>
-                    <span>Password</span>
-                    <input className={'signupIP signupIP-pwd'} type="password" value={pwd} onChange={(e) => setPwd(e.target.value)}></input>
-                </div>
-                <Button type="submit" severity="success">
-                    Submit
-                </Button>
+            <form className="signup-container">
+                <Container>
+                    <Row className="ip-row">
+                        <Col xs={3}><span>Email ID :</span></Col>
+                        <Col xs={9}><input className={'signup-IP'} value={uname} onChange={(e) => setUname(e.target.value)}></input></Col>
+                    </Row>
+                    <Row className="ip-row">
+                        <Col xs={3}><span>Password :</span></Col>
+                        <Col xs={9}><input className={'signup-IP signup-IP-pwd'} type="password" value={pwd} onChange={(e) => setPwd(e.target.value)}></input></Col>
+                    </Row>
+                    <div className="action-buttons">
+                        <Button className="submit-button" type="cancel" severity="success" onClick={() => navigate('/')}>Back</Button>
+                        <Button className="submit-button" type="submit" severity="success" onClick={onFormSubmit}>Submit</Button>
+                    </div>
+                </Container>
             </form>
         </div>
     );
