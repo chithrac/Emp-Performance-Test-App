@@ -4,16 +4,47 @@
 }
 
 .home-page-container .page-title {
+    width: 100%;
     font-family: Roboto;
     font-size: 75px;
     font-weight: 700;
-
+    text-align: left;
+    padding-left: 40px;
 }
 
-.home-page-container .graphs{
-    width: 500px;
+.home-page-container .graphs {
+    width: 600px;
+    height: 350px;
+    background-color: #F5F698;
 }
 
-.home-page-container .actions .action-item{
+.home-page-container .graphs img{
+    width: 100%;
+}
+
+.home-page-container .page-contents {
+    width: 100%;
+}
+
+.home-page-container .actions {
+    line-height: 45px;
+}
+
+.home-page-container .actions .action {
+    display: flex;
+    background-color: #f5f698;
+    font-size: 25px;
+    padding-right: 30px;
+    justify-content: flex-end;
+}
+
+.home-page-container .actions .action-items {
+    padding-right: 30px;
+    text-align: end;
+}
+
+.home-page-container .actions .action-items .action-item {
     cursor: pointer;
+    font-size: 18px;
+    text-decoration: underline;
 }

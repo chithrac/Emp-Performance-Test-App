@@ -15,12 +15,16 @@ function Login() {
     const [pwd, setPwd] = useState('');
     const onFormSubmit = async (e) => {
         e.preventDefault();
-        console.log('form submitted');
+        console.log('Form submitted');
         if (uname === '' || pwd === '') {
             alert('Please fill mandatory fields!');
             return;
-        } else {
+        } else if (uname == 'chithra.c' && pwd == '123') {
             console.log(pwd, uname);
+        }
+        else {
+            alert('Please enter valid credentials');
+            return;
         }
         const login = {
             userName: uname,

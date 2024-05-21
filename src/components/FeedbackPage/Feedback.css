@@ -1,0 +1,24 @@
+.feedback-page-container {
+    background:
+        url('../../assets/Blob-2.png') right top no-repeat,
+        url('../../assets/Blob-3.png') left bottom no-repeat,
+        url('../../assets/Blob-4.png') right bottom no-repeat;
+}
+
+.feedback-page-container .title {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.feedback-page-container .cards{
+    margin-top: 5rem;
+}
+
+.feedback-page-container .cards img{
+    width: 70%;
+    cursor: pointer;
+}

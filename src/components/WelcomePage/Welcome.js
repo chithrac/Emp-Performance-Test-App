@@ -11,10 +11,10 @@ function Welcome() {
     return (
         <div className={styles.welcomePageContainer + " App"}>
             <div className={styles.welcomeContainer}>
-                <span className={styles.welcome}>Welcome to XYZ Ltd.</span>
-                <div className={styles.description}>Let's get started!</div>
-                <button onClick={() => navigate('/Login')}>Login</button>
-                <button onClick={() => navigate('/Signup')}>Signup</button>
+                <span className={styles.welcome}>Welcome</span>
+                <div className={styles.description}>to your personalized performance dashboard, where your achievements shine and feedback drives growth.</div>
+                <button className={styles.button} onClick={() => navigate('/Login')}><span>Login</span><span>{">"}</span></button>
+                {/* <button onClick={() => navigate('/Signup')}>Signup</button> */}
             </div>
         </div>
     );

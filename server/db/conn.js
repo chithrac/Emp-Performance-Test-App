@@ -18,7 +18,7 @@ module.exports = {
       // Verify we got a good "db" object
     //   if (db)
     //   {
-        _db = client.db("todo_DB");
+        _db = client.db("Employee");
         // _db = db.db("sample_airbnb");
         console.log("Successfully connected to MongoDB."); 
     //   }

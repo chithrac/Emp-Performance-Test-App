@@ -1,0 +1,57 @@
+.rate-page-container {
+    background:
+        url('../../assets/Blob-2.png') right top no-repeat,
+        url('../../assets/Blob-3.png') left bottom no-repeat,
+        url('../../assets/Blob-4.png') right bottom no-repeat;
+}
+
+.rate-page-container .title {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.rate-page-container .input-box {
+    width: 100%;
+    margin: 10rem auto 15px auto;
+}
+
+.rate-page-container .input-box input,
+.rate-page-container .input-box select {
+    width: 50%;
+    background-color: #f0c51f;
+    border-color: #f0c51f;
+    border-radius: 20px;
+    height: 40px;
+}
+
+.rate-page-container .button {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.rate-page-container .previous {
+    width: 100%;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.rate-page-container .rating {
+    background-color: #f0c51f;
+    height: 12rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 500;
+    border-radius: 20px;
+}

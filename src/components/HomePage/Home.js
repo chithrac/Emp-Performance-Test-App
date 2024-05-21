@@ -3,6 +3,7 @@ import 'primeicons/primeicons.css';
 import './Home.css';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import chart from '../../assets/chart.png';
 
 function Home() {
     const navigate = useNavigate();
@@ -34,13 +35,18 @@ function Home() {
             <div className='page-title'>
                 <span>Employee Overview</span>
             </div>
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between page-contents">
                 <div className='graphs'>
-
+                    <img src={chart}/>
                 </div>
                 <div className="actions">
-                    <div>Actions:</div>
-                    <div className="action-item"onClick={() => navigate('/')}>Go Back to welcome page</div>
+                    <div className="action">Actions:</div>
+                    <div className="action-items">
+                        <div className="action-item" onClick={() => navigate('/')}>Go Back to welcome page</div>
+                        <div className="action-item" onClick={() => navigate('/Search')}>Rate an employee</div>
+                        <div className="action-item" onClick={() => navigate('/YourRating')}>See my Rating</div>
+                        <div className="action-item" onClick={() => navigate('/Feedback')}>Provide feedback</div>
+                    </div>
                 </div>
             </div>
         </div>
